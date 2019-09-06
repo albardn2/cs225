@@ -22,9 +22,13 @@ int main()
     std::cout << std::endl;
 
     fileio::init();
+    std::cout << "TIHS IS 1" << std::endl;
     Allocator theAllocator("students.txt", "rooms.txt");
+    std::cout << "TIHS IS 2" << std::endl;
     theAllocator.allocate();
+    std::cout << "TIHS IS 3" << std::endl;
     theAllocator.printRooms();
+    std::cout << "TIHS IS 4" << std::endl;
     fileio::halt();
 
     std::cout << std::endl;

@@ -23,10 +23,9 @@ Room::Room(const std::string& init_name, int init_capacity)
 
 Room::Room(const Room& other)
 {
-  if (this != &other){
     clear();
     copy(other);
-  }
+
 }
 
 Room& Room::operator=(const Room& other)
@@ -75,9 +74,13 @@ void Room::copy(const Room& other)
     capacity = other.capacity;
     count = other.count;
     letterCount = other.letterCount;
+    if (other.letters == NULL){
+      letters  = NULL;
+    }else{
     letters = new Letter[max_letters];
-    for (int i = 0; i < max_letters ; i++){
+    for (int i = 0; i < letterCount ; i++){
       letters[i] = other.letters[i];
+    }
     }
 
 }
