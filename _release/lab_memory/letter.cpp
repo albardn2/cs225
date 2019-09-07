@@ -16,5 +16,5 @@ void Letter::addStudent()
 
 bool Letter::operator<(const Letter& other) const
 {
-    return count < other.count;
+    return count > other.count;
 }

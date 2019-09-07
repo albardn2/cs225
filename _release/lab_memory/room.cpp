@@ -32,8 +32,9 @@ Room& Room::operator=(const Room& other)
 {
     if (this != &other) {
         clear();
-        copy(other);
     }
+    copy(other);
+
     return *this;
 }
 
@@ -77,8 +78,8 @@ void Room::copy(const Room& other)
     if (other.letters == NULL){
       letters  = NULL;
     }else{
-    letters = new Letter[max_letters];
-    for (int i = 0; i < letterCount ; i++){
+    letters = new Letter[other.max_letters];
+    for (int i = 0; i < other.letterCount ; i++){
       letters[i] = other.letters[i];
     }
     }
