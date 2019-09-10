@@ -83,5 +83,5 @@ class Shape : public Drawable
      */
     cs225::HSLAPixel color() const;
 
-    void draw(cs225::PNG* canvas) const;
+    virtual void draw(cs225::PNG* canvas) const;
 };

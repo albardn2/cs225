@@ -57,7 +57,7 @@ class Rectangle : public Shape
      *
      * @param canvas to draw onto
      */
-    void draw(cs225::PNG* canvas) const;
+    virtual void draw(cs225::PNG* canvas) const;
 
     /**
      * Gets the width of the Rectangle in pixels
