@@ -90,4 +90,3 @@ class Triangle : public Shape
      */
     void set_vertex(int i, const Vector2& value);
 };
-
